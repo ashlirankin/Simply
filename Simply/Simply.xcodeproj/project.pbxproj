@@ -13,6 +13,7 @@
 		2E7ADEDF2B1E496F009B1B99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E7ADEDE2B1E496F009B1B99 /* Preview Assets.xcassets */; };
 		2E7ADEE62B1E4992009B1B99 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADEE52B1E4992009B1B99 /* PersistenceController.swift */; };
 		2E7ADEE82B1E4A1B009B1B99 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADEE72B1E4A1B009B1B99 /* TaskManager.swift */; };
+		2E7ADEEC2B1E4AAA009B1B99 /* TodoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADEEB2B1E4AAA009B1B99 /* TodoTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2E7ADEDE2B1E496F009B1B99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2E7ADEE52B1E4992009B1B99 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		2E7ADEE72B1E4A1B009B1B99 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		2E7ADEEB2B1E4AAA009B1B99 /* TodoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				2E7ADEDD2B1E496F009B1B99 /* Preview Content */,
 				2E7ADEE52B1E4992009B1B99 /* PersistenceController.swift */,
 				2E7ADEE72B1E4A1B009B1B99 /* TaskManager.swift */,
+				2E7ADEEB2B1E4AAA009B1B99 /* TodoTask.swift */,
 			);
 			path = Simply;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E7ADEE62B1E4992009B1B99 /* PersistenceController.swift in Sources */,
+				2E7ADEEC2B1E4AAA009B1B99 /* TodoTask.swift in Sources */,
 				2E7ADEDA2B1E496E009B1B99 /* ContentView.swift in Sources */,
 				2E7ADEE82B1E4A1B009B1B99 /* TaskManager.swift in Sources */,
 				2E7ADED82B1E496E009B1B99 /* SimplyApp.swift in Sources */,
