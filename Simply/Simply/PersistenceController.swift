@@ -11,9 +11,9 @@ import Foundation
 final class PersistenceController {
     
     static let shared = PersistenceController()
-    private let fileManager: FileManager = FileManager.default
     
-    let containerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.tasks1")!
+    private let fileManager: FileManager = FileManager.default
+    private let containerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.tasks1")!
     
     private init() {}
     
@@ -21,7 +21,6 @@ final class PersistenceController {
         if !fileManager.fileExists(atPath: path.path()) {
             do {
                 try fileManager.createDirectory(at: containerURL, withIntermediateDirectories: true, attributes: nil)
-
             }
         }
 
@@ -39,10 +38,7 @@ final class PersistenceController {
                 return []
             }
             return try JSONDecoder().decode([T].self, from: data)
-        } catch {
-            print(error.localizedDescription)
         }
-        return []
     }
     
     func readItem<T: Codable & Identifiable>(at path: URL, with identifier: any Hashable) throws -> T? {
@@ -64,11 +60,4 @@ final class PersistenceController {
             try writeItem(at: path, item)
         }
     }
-}
-
-extension URL {
-    static let tasksPath: URL = {
-        let container = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.tasks1")!
-        return container.appendingPathComponent("task")
-    }()
 }
