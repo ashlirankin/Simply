@@ -11,14 +11,9 @@ import SwiftUI
 
 @MainActor
 final class TaskManager: NSObject, ObservableObject {
-    
-    enum TaskError: LocalizedError {
-        case unableToRead
-        case unableToWrite
-    }
-    
+
     @Published private(set) var tasks: [TodoTask] = []
-    @Published private(set) var error: TaskError?
+    @Published private(set) var error: PersistenceError?
     
     var shouldPresentAlert: Binding<Bool> {
         return Binding {
@@ -28,7 +23,8 @@ final class TaskManager: NSObject, ObservableObject {
         }
     }
     
-    private let persistenceController: PersistenceController = .shared
+    private let persistenceController: PersistenceController = PersistenceController()
+    
     private var cancellables = Set<AnyCancellable>()
     
     static let shared = TaskManager()
@@ -50,7 +46,7 @@ final class TaskManager: NSObject, ObservableObject {
             try persistenceController.writeItem(at: .tasksPath, task)
             tasks = try persistenceController.readAllItems(at: .tasksPath)
         } catch {
-            self.error = .unableToWrite
+            self.error = error as? PersistenceError
         }
     }
     
@@ -61,7 +57,7 @@ final class TaskManager: NSObject, ObservableObject {
             self.tasks = tasks
             return tasks
         } catch {
-            self.error = .unableToRead
+            self.error = error as? PersistenceError
         }
         return []
     }
@@ -72,7 +68,7 @@ final class TaskManager: NSObject, ObservableObject {
             task.isComplete = task.isComplete ? false : true
             try persistenceController.writeItem(at: .tasksPath, task)
         } catch {
-            self.error = .unableToWrite
+            self.error = error as? PersistenceError
         }
     }
 }
