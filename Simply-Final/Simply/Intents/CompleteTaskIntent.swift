@@ -7,6 +7,7 @@
 
 import Foundation
 import AppIntents
+import SwiftUI
 
 struct CompleteTaskIntent: AppIntent {
 
@@ -18,7 +19,21 @@ struct CompleteTaskIntent: AppIntent {
 
     static var title: LocalizedStringResource = "Complete Task"
     
-    func perform() async throws -> some IntentResult {
-        return .result()
+    private var taskManager = TaskManager.shared
+    
+    private var successConfirmationView: some View {
+        VStack {
+            Image(systemName: "checkmark.circle")
+                .foregroundStyle(.green)
+                .imageScale(.large)
+                .font(.largeTitle)
+            Text("Task Completed")
+        }
+    }
+    
+    @MainActor
+    func perform() async throws -> some ShowsSnippetView {
+        taskManager.markTaskAsComplete(task: task)
+        return .result(view: successConfirmationView)
     }
 }

@@ -57,7 +57,7 @@ final class PersistenceController {
         return element
     }
     
-    func removeItem<T: Codable & Identifiable>(at path: URL, with identifier: any Hashable, of type: T.Type) throws {
+    func removeItem(at path: URL) throws {
         try fileManager.removeItem(at: path)
     }
 }
