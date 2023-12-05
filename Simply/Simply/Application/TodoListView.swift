@@ -10,9 +10,10 @@ import SwiftUI
 struct TodoListView: View {
     
     @StateObject private var taskManager: TaskManager = .shared
+    
     @State private var shouldShowAddView = false
     
-    static let taskDateFormat: DateFormatter = {
+    private static let taskDateFormat: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
