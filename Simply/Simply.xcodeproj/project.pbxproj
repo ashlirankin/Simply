@@ -31,6 +31,7 @@
 		2E7ADEF22B1E9321009B1B99 /* URL+TaskEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+TaskEndpoint.swift"; sourceTree = "<group>"; };
 		2E7ADEFC2B1F5FCA009B1B99 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		2E7ADEFE2B1F6107009B1B99 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		2E7ADF002B1F61A0009B1B99 /* Simply.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Simply.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 		2E7ADED62B1E496E009B1B99 /* Simply */ = {
 			isa = PBXGroup;
 			children = (
+				2E7ADF002B1F61A0009B1B99 /* Simply.entitlements */,
 				2E7ADEFA2B1F5BA0009B1B99 /* Tasks */,
 				2E7ADEF72B1F5B7A009B1B99 /* Application */,
 				2E7ADEDB2B1E496F009B1B99 /* Assets.xcassets */,
@@ -341,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Simply/Simply.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simply/Preview Content\"";
@@ -370,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Simply/Simply.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simply/Preview Content\"";

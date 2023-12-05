@@ -8,8 +8,10 @@
 import Foundation
 
 extension URL {
+    
+    static let appGroupContainerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.app.intent.demo")!
+    
     static let tasksPath: URL = {
-        let container = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.tasks1")!
-        return container.appendingPathComponent("task")
+        return .appGroupContainerURL.appendingPathComponent("task")
     }()
 }

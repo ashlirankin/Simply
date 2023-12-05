@@ -13,14 +13,13 @@ final class PersistenceController {
     static let shared = PersistenceController()
     
     private let fileManager: FileManager = FileManager.default
-    private let containerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.tasks1")!
     
     private init() {}
     
     func writeItem<T: Codable>(at path: URL, _ item: T) throws {
         if !fileManager.fileExists(atPath: path.path()) {
             do {
-                try fileManager.createDirectory(at: containerURL, withIntermediateDirectories: true, attributes: nil)
+                try fileManager.createDirectory(at: .appGroupContainerURL, withIntermediateDirectories: true, attributes: nil)
             }
         }
 
