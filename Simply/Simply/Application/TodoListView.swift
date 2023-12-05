@@ -25,7 +25,7 @@ struct TodoListView: View {
             Group {
                 List(taskManager.tasks, id: \.id) { task in
                     Button {
-                        taskManager.markTaskAsCompleteIfNeeded(task)
+                        taskManager.markTaskAsComplete(task: task)
                     } label: {
                         HStack {
                             Image(systemName: task.isComplete ? "multiply.square" : "square")
@@ -39,6 +39,11 @@ struct TodoListView: View {
                             }
                             .strikethrough(task.isComplete)
                         }
+                    }
+                }
+                .safeAreaInset(edge: .top) {
+                    if taskManager.tasks.isEmpty {
+                        ContentUnavailableView("Currently no tasks", systemImage: "note.text.badge.plus")
                     }
                 }
             }

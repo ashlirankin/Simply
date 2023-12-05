@@ -37,7 +37,9 @@ struct AddTaskView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        taskManager.addTask(TodoTask(title: taskText, createDate: taskDate))
+                        let task = TodoTask(title: taskText, createDate: taskDate)
+                        taskManager.addTask(task)
+                        dismiss()
                     } label: {
                         Image(systemName: "checkmark")
                     }

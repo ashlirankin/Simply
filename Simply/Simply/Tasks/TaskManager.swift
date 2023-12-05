@@ -62,11 +62,17 @@ final class TaskManager: NSObject, ObservableObject {
         return []
     }
     
-    func markTaskAsCompleteIfNeeded(_ task: TodoTask) {
+    func markTaskAsComplete(task: TodoTask) {
         do {
             var task = task
-            task.isComplete = task.isComplete ? false : true
-            try persistenceController.writeItem(at: .tasksPath, task)
+            task.isComplete = true
+            
+            var tasks = tasks
+            tasks.removeAll(where: { $0.id == task.id })
+            tasks.append(task)
+
+            try persistenceController.writeItems(at: .tasksPath, tasks)
+            fetchTasks()
         } catch {
             self.error = error as? PersistenceError
         }
