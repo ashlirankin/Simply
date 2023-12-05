@@ -15,7 +15,7 @@ struct TodoTask: Codable, Identifiable  {
     
     var createDate: Date = Date()
     
-    let executedDate: Date
+    var executedDate: Date? = nil
     
     var isComplete: Bool = false
 }

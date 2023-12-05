@@ -16,6 +16,7 @@
 		2E7ADEEC2B1E4AAA009B1B99 /* TodoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADEEB2B1E4AAA009B1B99 /* TodoTask.swift */; };
 		2E7ADEF32B1E9321009B1B99 /* URL+TaskEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADEF22B1E9321009B1B99 /* URL+TaskEndpoint.swift */; };
 		2E7ADEFD2B1F5FCA009B1B99 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADEFC2B1F5FCA009B1B99 /* AddTaskView.swift */; };
+		2E7ADEFF2B1F6107009B1B99 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADEFE2B1F6107009B1B99 /* TodoListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		2E7ADEEB2B1E4AAA009B1B99 /* TodoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTask.swift; sourceTree = "<group>"; };
 		2E7ADEF22B1E9321009B1B99 /* URL+TaskEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+TaskEndpoint.swift"; sourceTree = "<group>"; };
 		2E7ADEFC2B1F5FCA009B1B99 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		2E7ADEFE2B1F6107009B1B99 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				2E7ADED72B1E496E009B1B99 /* SimplyApp.swift */,
 				2E7ADED92B1E496E009B1B99 /* ContentView.swift */,
+				2E7ADEFE2B1F6107009B1B99 /* TodoListView.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			files = (
 				2E7ADEE62B1E4992009B1B99 /* PersistenceController.swift in Sources */,
 				2E7ADEFD2B1F5FCA009B1B99 /* AddTaskView.swift in Sources */,
+				2E7ADEFF2B1F6107009B1B99 /* TodoListView.swift in Sources */,
 				2E7ADEF32B1E9321009B1B99 /* URL+TaskEndpoint.swift in Sources */,
 				2E7ADEEC2B1E4AAA009B1B99 /* TodoTask.swift in Sources */,
 				2E7ADEDA2B1E496E009B1B99 /* ContentView.swift in Sources */,

@@ -14,6 +14,8 @@ struct AddTaskView: View {
     @State private var taskText = ""
     @State private var taskDate: Date = .now
     
+    @ObservedObject var taskManager: TaskManager
+    
     var body: some View {
         NavigationView {
             Form  {
@@ -35,7 +37,7 @@ struct AddTaskView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        TaskManager.shared.addTask(TodoTask(title: taskText, createDate: taskDate, executedDate: .now))
+                        taskManager.addTask(TodoTask(title: taskText, createDate: taskDate))
                     } label: {
                         Image(systemName: "checkmark")
                     }
@@ -46,5 +48,5 @@ struct AddTaskView: View {
 }
 
 #Preview {
-    AddTaskView()
+    AddTaskView(taskManager: .shared)
 }
