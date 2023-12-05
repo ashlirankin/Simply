@@ -18,6 +18,7 @@
 		2E7ADEFD2B1F5FCA009B1B99 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADEFC2B1F5FCA009B1B99 /* AddTaskView.swift */; };
 		2E7ADEFF2B1F6107009B1B99 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADEFE2B1F6107009B1B99 /* TodoListView.swift */; };
 		2E7ADF022B1F65B0009B1B99 /* PersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADF012B1F65B0009B1B99 /* PersistenceError.swift */; };
+		2E7ADF052B1F7B85009B1B99 /* CompleteTaskIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADF042B1F7B85009B1B99 /* CompleteTaskIntent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		2E7ADEFE2B1F6107009B1B99 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		2E7ADF002B1F61A0009B1B99 /* Simply.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Simply.entitlements; sourceTree = "<group>"; };
 		2E7ADF012B1F65B0009B1B99 /* PersistenceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceError.swift; sourceTree = "<group>"; };
+		2E7ADF042B1F7B85009B1B99 /* CompleteTaskIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTaskIntent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		2E7ADED62B1E496E009B1B99 /* Simply */ = {
 			isa = PBXGroup;
 			children = (
+				2E7ADF032B1F7B6F009B1B99 /* Intents */,
 				2E7ADF002B1F61A0009B1B99 /* Simply.entitlements */,
 				2E7ADEFA2B1F5BA0009B1B99 /* Tasks */,
 				2E7ADEF72B1F5B7A009B1B99 /* Application */,
@@ -136,6 +139,14 @@
 				2E7ADEFC2B1F5FCA009B1B99 /* AddTaskView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2E7ADF032B1F7B6F009B1B99 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				2E7ADF042B1F7B85009B1B99 /* CompleteTaskIntent.swift */,
+			);
+			path = Intents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 				2E7ADEFD2B1F5FCA009B1B99 /* AddTaskView.swift in Sources */,
 				2E7ADEFF2B1F6107009B1B99 /* TodoListView.swift in Sources */,
 				2E7ADEF32B1E9321009B1B99 /* URL+TaskEndpoint.swift in Sources */,
+				2E7ADF052B1F7B85009B1B99 /* CompleteTaskIntent.swift in Sources */,
 				2E7ADEEC2B1E4AAA009B1B99 /* TodoTask.swift in Sources */,
 				2E7ADEDA2B1E496E009B1B99 /* ContentView.swift in Sources */,
 				2E7ADEE82B1E4A1B009B1B99 /* TaskManager.swift in Sources */,
