@@ -47,7 +47,7 @@ final class TaskManager: NSObject, ObservableObject {
             tasks.append(task)
             try persistenceController.save(tasks)
             
-            tasks = try persistenceController.fetch()
+            tasks = fetchTasks()
         } catch {
             self.error = error as? PersistenceError
         }
@@ -57,7 +57,7 @@ final class TaskManager: NSObject, ObservableObject {
     func fetchTasks() -> [TodoTask] {
         do {
             let tasks: [TodoTask] = try persistenceController.fetch()
-            self.tasks = tasks
+            self.tasks = tasks.sorted { $0.createDate > $1.createDate && !$0.isComplete }
             return tasks
         } catch {
             self.error = error as? PersistenceError
@@ -67,14 +67,16 @@ final class TaskManager: NSObject, ObservableObject {
     
     func markTaskAsComplete(task: TodoTask) {
         do {
-            var task = task
-            task.isComplete = true
+            var tasks = fetchTasks()
+            guard var element = tasks.first(where: { $0.id == task.id }),
+                  let elementIndex = tasks.firstIndex(where: { $0.id == task.id }) else {
+                return
+            }
             
-            var tasks = tasks
-            tasks.removeAll(where: { $0.id == task.id })
-            tasks.append(task)
-
+            element.isComplete.toggle()
+            tasks[elementIndex] = element
             try persistenceController.save(tasks)
+            
             fetchTasks()
         } catch {
             self.error = error as? PersistenceError

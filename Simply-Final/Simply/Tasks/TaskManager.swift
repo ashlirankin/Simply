@@ -53,13 +53,12 @@ final class TaskManager: NSObject, ObservableObject {
     @discardableResult
     func fetchTasks() -> [TodoTask] {
         do {
-            let tasks: [TodoTask] = try persistenceController.readAllItems(at: .tasksPath)
-            self.tasks = tasks
+            tasks = try persistenceController.readAllItems(at: .tasksPath)
             return tasks
         } catch {
             self.error = error as? PersistenceError
+            return []
         }
-        return []
     }
     
     @MainActor
