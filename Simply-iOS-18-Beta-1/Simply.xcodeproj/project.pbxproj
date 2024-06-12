@@ -19,6 +19,8 @@
 		2E7ADEFD2B1F5FCA009B1B99 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADEFC2B1F5FCA009B1B99 /* AddTaskView.swift */; };
 		2E7ADEFF2B1F6107009B1B99 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADEFE2B1F6107009B1B99 /* TodoListView.swift */; };
 		2E7ADF022B1F65B0009B1B99 /* PersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADF012B1F65B0009B1B99 /* PersistenceError.swift */; };
+		2EBEEA022C19F8480022B80A /* CompleteTaskIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEEA012C19F8480022B80A /* CompleteTaskIntent.swift */; };
+		2EBEEA042C19F89B0022B80A /* TodoTask+AppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEEA032C19F89B0022B80A /* TodoTask+AppEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		2E7ADEFE2B1F6107009B1B99 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		2E7ADF002B1F61A0009B1B99 /* Simply.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Simply.entitlements; sourceTree = "<group>"; };
 		2E7ADF012B1F65B0009B1B99 /* PersistenceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceError.swift; sourceTree = "<group>"; };
+		2EBEEA012C19F8480022B80A /* CompleteTaskIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTaskIntent.swift; sourceTree = "<group>"; };
+		2EBEEA032C19F89B0022B80A /* TodoTask+AppEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoTask+AppEntity.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		2E7ADED62B1E496E009B1B99 /* Simply */ = {
 			isa = PBXGroup;
 			children = (
+				2EBEEA002C19F8250022B80A /* Intents */,
 				2E7ADF002B1F61A0009B1B99 /* Simply.entitlements */,
 				2E7ADEFA2B1F5BA0009B1B99 /* Tasks */,
 				2E7ADEF72B1F5B7A009B1B99 /* Application */,
@@ -110,6 +115,7 @@
 			children = (
 				2E7ADEF22B1E9321009B1B99 /* URL+TaskEndpoint.swift */,
 				2E72061E2C19F0130029191A /* Decoders+API.swift */,
+				2EBEEA032C19F89B0022B80A /* TodoTask+AppEntity.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -139,6 +145,14 @@
 				2E7ADEFC2B1F5FCA009B1B99 /* AddTaskView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2EBEEA002C19F8250022B80A /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				2EBEEA012C19F8480022B80A /* CompleteTaskIntent.swift */,
+			);
+			path = Intents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,10 +226,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E7ADEE62B1E4992009B1B99 /* PersistenceController.swift in Sources */,
+				2EBEEA042C19F89B0022B80A /* TodoTask+AppEntity.swift in Sources */,
 				2E7ADF022B1F65B0009B1B99 /* PersistenceError.swift in Sources */,
 				2E7ADEFD2B1F5FCA009B1B99 /* AddTaskView.swift in Sources */,
 				2E72061F2C19F0130029191A /* Decoders+API.swift in Sources */,
 				2E7ADEFF2B1F6107009B1B99 /* TodoListView.swift in Sources */,
+				2EBEEA022C19F8480022B80A /* CompleteTaskIntent.swift in Sources */,
 				2E7ADEF32B1E9321009B1B99 /* URL+TaskEndpoint.swift in Sources */,
 				2E7ADEEC2B1E4AAA009B1B99 /* TodoTask.swift in Sources */,
 				2E7ADEDA2B1E496E009B1B99 /* ContentView.swift in Sources */,
