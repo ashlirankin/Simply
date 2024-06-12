@@ -11,7 +11,7 @@ extension URL {
     
     static let appGroupContainerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.app.intent.demo")!
     
-    static let tasksPath: URL = {
-        return .appGroupContainerURL.appendingPathComponent("task")
+    static let tasksEndpoint: URL = {
+        return .appGroupContainerURL.appendingPathComponent("tasks.json")
     }()
 }

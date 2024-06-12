@@ -23,7 +23,7 @@ final class TaskManager: NSObject, ObservableObject {
         }
     }
     
-    private let persistenceController: PersistenceController = PersistenceController()
+    private let persistenceController: PersistenceController<TodoTask> = PersistenceController()
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -43,8 +43,11 @@ final class TaskManager: NSObject, ObservableObject {
     
     func addTask(_ task: TodoTask) {
         do {
-            try persistenceController.writeItem(at: .tasksPath, task)
-            tasks = try persistenceController.readAllItems(at: .tasksPath)
+            var tasks = try persistenceController.fetch()
+            tasks.append(task)
+            try persistenceController.save(tasks)
+            
+            tasks = try persistenceController.fetch()
         } catch {
             self.error = error as? PersistenceError
         }
@@ -53,7 +56,7 @@ final class TaskManager: NSObject, ObservableObject {
     @discardableResult
     func fetchTasks() -> [TodoTask] {
         do {
-            let tasks: [TodoTask] = try persistenceController.readAllItems(at: .tasksPath)
+            let tasks: [TodoTask] = try persistenceController.fetch()
             self.tasks = tasks
             return tasks
         } catch {
@@ -71,7 +74,7 @@ final class TaskManager: NSObject, ObservableObject {
             tasks.removeAll(where: { $0.id == task.id })
             tasks.append(task)
 
-            try persistenceController.writeItems(at: .tasksPath, tasks)
+            try persistenceController.save(tasks)
             fetchTasks()
         } catch {
             self.error = error as? PersistenceError

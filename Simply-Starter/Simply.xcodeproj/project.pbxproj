@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E72061F2C19F0130029191A /* Decoders+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72061E2C19F0130029191A /* Decoders+API.swift */; };
 		2E7ADED82B1E496E009B1B99 /* SimplyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADED72B1E496E009B1B99 /* SimplyApp.swift */; };
 		2E7ADEDA2B1E496E009B1B99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7ADED92B1E496E009B1B99 /* ContentView.swift */; };
 		2E7ADEDC2B1E496F009B1B99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E7ADEDB2B1E496F009B1B99 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E72061E2C19F0130029191A /* Decoders+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decoders+API.swift"; sourceTree = "<group>"; };
 		2E7ADED42B1E496E009B1B99 /* Simply.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simply.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E7ADED72B1E496E009B1B99 /* SimplyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplyApp.swift; sourceTree = "<group>"; };
 		2E7ADED92B1E496E009B1B99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				2E7ADEF22B1E9321009B1B99 /* URL+TaskEndpoint.swift */,
+				2E72061E2C19F0130029191A /* Decoders+API.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				2E7ADEE62B1E4992009B1B99 /* PersistenceController.swift in Sources */,
 				2E7ADF022B1F65B0009B1B99 /* PersistenceError.swift in Sources */,
 				2E7ADEFD2B1F5FCA009B1B99 /* AddTaskView.swift in Sources */,
+				2E72061F2C19F0130029191A /* Decoders+API.swift in Sources */,
 				2E7ADEFF2B1F6107009B1B99 /* TodoListView.swift in Sources */,
 				2E7ADEF32B1E9321009B1B99 /* URL+TaskEndpoint.swift in Sources */,
 				2E7ADEEC2B1E4AAA009B1B99 /* TodoTask.swift in Sources */,
